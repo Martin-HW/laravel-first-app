@@ -13,6 +13,32 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', function(){
+    return "Welcome Home guys";
 });
+
+Route::get('/courses', function(){
+    return "Welcome to courses";
+});
+
+Route::get('/courses/{course}', function($course){
+    return "Welcome to the course $course";
+});
+
+Route::get('/courses/{course}/{lesson?}', function($course, $lesson = null){
+    if($lesson){
+        return "The course is: $course and the lesson's: $lesson";
+    }else{
+        return "the course is: $course";
+    }
+});
+
+
+
+
+
+
