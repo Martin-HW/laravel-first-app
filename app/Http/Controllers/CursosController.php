@@ -7,14 +7,14 @@ use Illuminate\Http\Request;
 class CursosController extends Controller
 {
     public function index(){
-        return "Hello from index method";
+        return view('cursos.index');
     }
 
     public function create(){
-        return "Hello from create method";
+        return view('cursos.create');
     }
 
     public function show($curso){
-        return "Hello from show method and course is: $curso";
+        return view('cursos.show', compact('curso')); //['curso' => $curso]
     }
 }
