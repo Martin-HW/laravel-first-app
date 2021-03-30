@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\CursosController;
+use App\Http\Controllers\CursoController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -41,11 +41,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', HomeController::class);
 
-Route::get('/cursos', [CursosController::class, 'index'])->name('cursos.index');
+Route::get('/cursos', [CursoController::class, 'index'])->name('cursos.index');
 
-Route::get('/cursos/create', [CursosController::class, 'create'])->name('cursos.create');
+Route::get('/cursos/create', [CursoController::class, 'create'])->name('cursos.create');
 
-Route::get('/cursos/{curso}', [CursosController::class, 'show'])->name('cursos.show');
+Route::get('/cursos/{id}', [CursoController::class, 'show'])->name('cursos.show');
 
 
 
