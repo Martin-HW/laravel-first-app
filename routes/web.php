@@ -55,9 +55,14 @@ Route::get('/', HomeController::class);
 
 // Route::delete('cursos/{curso}', [CursoController::class, 'destroy'])->name('cursos.destroy');
 
-Route::resource('asignaturas', CursoController::class)
-    ->parameters(['asignaturas' => 'cursos'])
-    ->names('cursos');
+Route::resource('cursos', CursoController::class);
+    
+
+// Route::resource('asignaturas', CursoController::class)
+//     ->parameters(['asignaturas' => 'cursos'])
+//     ->names('cursos');
+
+// php artisan r:l
 
 
 

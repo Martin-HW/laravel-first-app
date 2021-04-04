@@ -11,7 +11,9 @@
         @foreach ($cursos as $curso)
             {{-- <li>{{ $curso->name }}</li> --}}
             <li>
-                <a href="{{ route('cursos.show', $curso->id) }}"> --Curso-- {{ $curso->name}} </a>
+                <a href="{{ route('cursos.show', $curso) }}"> --Curso-- {{ $curso->name}} </a>
+                <br>
+                <!-- {{route('cursos.show', $curso)}} -->
             </li>
         @endforeach
     </ul>
