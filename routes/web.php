@@ -39,7 +39,7 @@ use Illuminate\Support\Facades\Route;
 //     }
 // });
 
-Route::get('/', HomeController::class);
+Route::get('/', HomeController::class)->name('home');
 
 // Route::get('/cursos', [CursoController::class, 'index'])->name('cursos.index');
 
@@ -56,6 +56,8 @@ Route::get('/', HomeController::class);
 // Route::delete('cursos/{curso}', [CursoController::class, 'destroy'])->name('cursos.destroy');
 
 Route::resource('cursos', CursoController::class);
+
+Route::view('nosotros', 'nosotros')->name('nosotros');
     
 
 // Route::resource('asignaturas', CursoController::class)
